@@ -13,6 +13,10 @@ TEMPLATE = app
 
 CONFIG += console
 
-SOURCES += main.cpp
+SOURCES += main.cpp \
+    cli.cpp
 
-HEADERS  +=
+HEADERS  += \
+    cli.h
+
+CONFIG += c++11
