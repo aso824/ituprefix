@@ -14,9 +14,11 @@ TEMPLATE = app
 CONFIG += console
 
 SOURCES += main.cpp \
-    cli.cpp
+    cli.cpp \
+    lookup.cpp
 
 HEADERS  += \
-    cli.h
+    cli.h \
+    lookup.h
 
 CONFIG += c++11

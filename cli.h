@@ -5,6 +5,8 @@
 #include <QTextStream>
 #include <QCoreApplication>
 
+#include "lookup.h"
+
 class CLI : public QObject
 {
         Q_OBJECT
@@ -13,7 +15,7 @@ class CLI : public QObject
 
     private:
         void printHelp();
-        void doLookup();
+        void doLookup(QString callsign);
 };
 
 #endif // CLI_H

@@ -23,6 +23,6 @@ int main(int argc, char *argv[])
     } else {
         // Non-GUI version
         QScopedPointer<CLI> console(new CLI(argc, argv, app.data()));
-
+        return 0;
     }
 }
