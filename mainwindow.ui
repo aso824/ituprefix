@@ -6,20 +6,65 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>390</width>
-    <height>308</height>
+    <width>412</width>
+    <height>315</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>ITU prefix lookup</string>
   </property>
-  <widget class="QWidget" name="centralwidget"/>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QFrame" name="frSearch">
+      <layout class="QFormLayout" name="formLayout">
+       <item row="0" column="0">
+        <widget class="QComboBox" name="cbSearchType">
+         <item>
+          <property name="text">
+           <string>Callsign</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Country</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QLineEdit" name="edQuery"/>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QTableWidget" name="tblResults">
+      <column>
+       <property name="text">
+        <string>From</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>To</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Country</string>
+       </property>
+      </column>
+     </widget>
+    </item>
+   </layout>
+  </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>390</width>
+     <width>412</width>
      <height>27</height>
     </rect>
    </property>
