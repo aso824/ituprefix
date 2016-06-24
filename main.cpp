@@ -3,6 +3,7 @@
 #include <QTextStream>
 
 #include "cli.h"
+#include "mainwindow.h"
 
 QCoreApplication* createApplication(int &argc, char *argv[]) {
     // Iterate over argv[] to find arguments
@@ -18,6 +19,8 @@ int main(int argc, char *argv[])
 
     if (qobject_cast<QApplication*>(app.data())) {
         // GUI version
+        MainWindow w;
+        w.show();
 
         return app->exec();
     } else {

@@ -15,10 +15,15 @@ CONFIG += console
 
 SOURCES += main.cpp \
     cli.cpp \
-    lookup.cpp
+    lookup.cpp \
+    mainwindow.cpp
 
 HEADERS  += \
     cli.h \
-    lookup.h
+    lookup.h \
+    mainwindow.h
 
 CONFIG += c++11
+
+FORMS += \
+    mainwindow.ui
