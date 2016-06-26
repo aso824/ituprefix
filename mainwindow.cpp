@@ -33,6 +33,11 @@ MainWindow::MainWindow(QWidget *parent) :
 
     // Connect search box signals
     connect(ui->edQuery, SIGNAL(textChanged(QString)), this, SLOT(doSearch()));
+
+    // Connect menu signals
+    connect(ui->actionAbout_author, SIGNAL(triggered(bool)), this, SLOT(showAboutAuthor()));
+    connect(ui->actionAbout_Qt, SIGNAL(triggered(bool)), this, SLOT(showAboutQt()));
+    connect(ui->actionExit, SIGNAL(triggered(bool)), this, SLOT(close()));
 }
 
 MainWindow::~MainWindow()
@@ -78,4 +83,20 @@ void MainWindow::doSearch() {
         ui->tblResults->setItem(row, 1, new QTableWidgetItem(it->first.second));
         ui->tblResults->setItem(row, 2, new QTableWidgetItem(it->second));
     }
+}
+
+void MainWindow::showAboutAuthor() {
+    QMessageBox aboutBox(this);
+    aboutBox.setWindowTitle(tr("About this application"));
+    aboutBox.setTextFormat(Qt::RichText);
+    aboutBox.setText(tr("A simple application that checks the caller's country.<br /><br />"
+                        "Author: Jan \"SP2ASO\" Szenborn<br />"
+                        "<a href='http://sp2aso.pl'>http://sp2aso.pl</a><br /><br />"
+                        "Licensed under LGPLv3, source on<br />"
+                        "<a href='http://github.com/aso824/ituprefix'>github.com/aso824/ituprefix</a>"));
+    aboutBox.exec();
+}
+
+void MainWindow::showAboutQt() {
+    QApplication::aboutQt();
 }

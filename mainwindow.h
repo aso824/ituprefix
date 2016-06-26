@@ -19,6 +19,10 @@ class MainWindow : public QMainWindow
         explicit MainWindow(QWidget *parent = 0);
         ~MainWindow();
 
+    public slots:
+        void showAboutAuthor();
+        void showAboutQt();
+
     private:
         Ui::MainWindow *ui;
         Lookup* lookup;
